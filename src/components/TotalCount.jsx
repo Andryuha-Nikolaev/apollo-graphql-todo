@@ -1,6 +1,5 @@
 import { Flex } from '@chakra-ui/react';
-
-import { useQuery } from '@apollo/client'
+import { useQuery } from '@apollo/client';
 import { ALL_TODO } from '../apollo/todos';
 
 const TotalCount = () => {
@@ -8,11 +7,9 @@ const TotalCount = () => {
 
   return (
     <Flex justifyContent={'center'} borderTop={'2px'} mt="5">
-      {data?.todos && (
-        <b>Total todos: {data.todos.length}</b>
-      )}
+      {data?.todos && <b>Total todos:</b>}
     </Flex>
-  )
-}
+  );
+};
 
 export default TotalCount;
